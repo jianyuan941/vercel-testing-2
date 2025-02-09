@@ -16,9 +16,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect server.js",
-    "start-server": "node server.js"
+    "start": "nodemon server",
   },
+
   "keywords": [],
   "directories": {
     "lib": "lib"
