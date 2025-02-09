@@ -3,7 +3,6 @@ const path = require('path');
 //import express
 const express = require('express');
 const bodyParser = require('body-parser');
-const serverless = require('serverless-http');
 
 //=======================================================================================================
 const app = express();
@@ -25,8 +24,6 @@ app.use(naviRoutes);
 //this part is for anypages that not matched previous routes then will routes to 404 page
 app.use(ErrorRoutes.get404);
 
-// app.listen(process.env.PORT || 3000,() => {
-//     console.log(`Server is up and running on port ${process.env.PORT || 3000}!`);
-// });
-module.exports = app;
-module.exports.handler = serverless(app);
+app.listen(process.env.PORT || 3000,() => {
+    console.log(`Server is up and running on port ${process.env.PORT || 3000}!`);
+});
